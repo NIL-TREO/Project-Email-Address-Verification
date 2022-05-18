@@ -1,7 +1,4 @@
-/* Prüffunktion für Emailadressen. Testet, ob eine Emailadresse korrekt aufgebaut ist
- * Schema: 
- * <1 - n Zeichen>@<1 - n Zeichen>.<2 - 3 Zeichen> */
-package W_7_5_Email_Check;
+package EmailAddressVerification;
 
 public class CheckMailAddress {
 	
@@ -10,8 +7,7 @@ public class CheckMailAddress {
 	private String emailAddress;
 	Responses a, b, c, d, e;
 	
-	
-	public CheckMailAddress(String emailAddress) {
+	CheckMailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
 		isEmail(this.emailAddress);
 	}
@@ -19,6 +15,7 @@ public class CheckMailAddress {
 	public void isEmail(String emailAddress) {
 		System.out.println("Total length of e-mail address: " + emailAddress.length() + " characters");
 		
+		// Assumption: valid e-mail scheme: <1 - n characters>@<1 - n characters>.<2 - 3 characters>
 		// search e-mail address for '@'-character. If it doesn't exist within the String,
 		// print error message from class "Responses"
 		positionAtChar = emailAddress.indexOf("@");
@@ -72,6 +69,4 @@ public class CheckMailAddress {
 		}
 		System.out.println("\nDoes the given e-mail address have a valid structure: " + allRequirementsOk);
 	}
-	
-	
 }
