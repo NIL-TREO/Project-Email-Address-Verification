@@ -1,8 +1,8 @@
-package W_7_5_Email_Check;
+package EmailAddressVerification;
+
 public class Responses {
 	
 	// This class contains specific responses to false boolean checks, which will be invoked in class CheckMail  
-	
 	public void hasNoAtChar() {
 		System.out.println("E-mail address does not contain '@' character.");
 	}
